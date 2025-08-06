@@ -1,6 +1,4 @@
-// Design Systems Tokens
-
-// import font
+// Import font
 @font-face {
   font-family: "TT Hoves";
   src: url("../fonts/TTHoves-Regular.woff2") format("woff2"),
@@ -43,10 +41,7 @@ $color-bg-gradient-end: #f3f3f3;
 $color-surface-primary-50: rgba(255, 255, 255, 0.5);
 $color-primary-500: #007bff;
 $text-primary: #212121;
-
-// Colors
 $text-primary-dark: #141414;
-
 $button-primary-outline: #7aa5e9;
 $button-primary-default: #2169db;
 
@@ -76,7 +71,7 @@ $font-size-base: 16px;
 $font-size-lg: 18px;
 $font-weight-bold: 700;
 $font-family-base: "TT Hoves", sans-serif;
-// time duration preview typography
+// Time duration preview typography
 $display-medium-small-size: 36px;
 $display-medium-small-line-height: 40px;
 $display-medium-small-tracking: -0.1px;
@@ -85,13 +80,13 @@ $title-demibold-large-size: 20px;
 $title-demibold-large-line-height: 26px;
 $title-demibold-large-tracking: -0.1px;
 
+// Line height
+$title-medium-medium-line-height: 24px;
+
 // Typography -- start and end time under ride duration
 $headline-medium-medium-size: 24px;
 $headline-medium-medium-line-height: 32px;
 $headline-medium-medium-tracking: -0.2px;
-
-// Shadows (added as placeholder)
-$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
 
 // Gradient Mixin
 @mixin background-gradient($direction: 180deg) {
@@ -116,7 +111,7 @@ $shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
   gap: $gap;
 }
 
-// __Reset Styles
+// Reset Styles
 *,
 *:before,
 *:after {
@@ -131,13 +126,11 @@ body {
   line-height: 1.5;
 }
 
-// === Component Styles ===
-// Block: wrapper
-.game-selection {
+// Component Styles
+.game-selector {
   @include background-gradient;
   height: 100vh;
   width: 100vw;
-
   display: flex;
   margin: 0 auto;
   padding: 94px 94px 93px 0;
@@ -151,48 +144,35 @@ body {
     height: 134px;
     border-radius: $radius-2xl;
     background: $color-surface-primary-50;
-
     padding: $spacing-md $spacing-2xl;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 12px;
-    &__title-bar {
-      display: flex;
+    @include flex-container(column, center, center, 12px);
+
+    &__header {
+      @include flex-container(row, flex-start, center);
       width: 592px;
-      align-items: flex-start;
-      align-content: center;
-      // gap: 12px;
 
       &__icon {
         margin: auto 0;
       }
 
-      &__display-text {
+      &__title {
         padding-left: 12px;
         color: $text-primary;
-
-        /* Display/Medium/Small */
         font-size: $display-medium-small-size;
         font-style: normal;
         font-weight: 500;
-        line-height: $display-medium-small-line-height; /* 111.111% */
+        line-height: $display-medium-small-line-height;
         letter-spacing: $display-medium-small-tracking;
       }
     }
   }
 
-  &__card {
+  &__panel {
     width: 640px;
     height: 743px;
+    @include flex-container(column, flex-start, flex-start);
 
-    display: flex;
-    width: 640px;
-    flex-direction: column;
-    align-items: flex-start;
-
-    &__duration-preview {
+    &__time-preview {
       border-radius: $radius-2xl $radius-2xl $radius-null $radius-null;
       border: 3px solid $stroke-primary-80;
       background: $surface-primary-50;
@@ -201,89 +181,87 @@ body {
       margin-bottom: -44px;
       padding: $spacing-md $spacing-2xl;
 
-      &__ride-duration {
+      &__duration {
         margin-top: 44px;
-
-        // &__start-time and &__end-time styles can be added here if needed
         color: $text-primary-dark;
         text-align: center;
-
-        /* Headline/Medium/Medium */
         font-size: $headline-medium-medium-size;
         font-style: normal;
         font-weight: 500;
-        line-height: $headline-medium-medium-line-height; /* 133.333% */
+        line-height: $headline-medium-medium-line-height;
         letter-spacing: $headline-medium-medium-tracking;
-
-        // Layout
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
+        @include flex-container(row, space-between, center);
         font-family: $font-family-base;
 
-        &__start-time {
+        &__start {
           padding: 0 $spacing-md;
         }
-        &__end-time {
-          padding: 0 $spacing-md 0;
+        &__end {
+          padding: 0 $spacing-md;
         }
       }
-      &__whole-timeframe {
+
+      &__timeline {
         padding-top: $spacing-xl;
       }
     }
 
-    &__set-duration {
+    &__duration-setter {
       border-radius: $radius-2xl;
       padding: $spacing-2xl;
       background: $surface-primary-light;
       backdrop-filter: blur(10px);
       height: 548px;
       width: 100%;
+      @include flex-container(column, space-between);
 
-      // Layout
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      &__view {
+      &__content {
         text-align: center;
+        color: $text-primary;
+        font-family: $font-family-base;
+        font-style: normal;
+        font-weight: 500;
+        line-height: $headline-medium-medium-size;
+        letter-spacing: $display-medium-small-tracking;
+
+        &__question,
+        &__hours,
+        &__unit,
+        &__instruction {
+          margin: 0;
+        }
       }
 
-      &__action {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: $spacing-md;
+      &__actions {
+        @include flex-container(column, center, center, $spacing-md);
         align-self: stretch;
-        justify-content: center; // Centers items vertically along the main axis
-        align-items: center; // Centers items horizontally along the cross axis
-        text-align: center;
         flex-wrap: wrap;
+
+        &__recommendation {
+          margin: 0;
+          color: $text-primary;
+          font-family: $font-family-base;
+          font-size: $font-size-base;
+          font-style: normal;
+          font-weight: 500;
+          line-height: $title-medium-medium-line-height;
+        }
       }
 
-      &__continue-btn {
-        display: flex;
+      &__continue-button {
+        @include flex-container(row, center, center);
         height: 72px;
         width: 100%;
         padding: $spacing-xl $spacing-6xl;
-        justify-content: center;
-        align-items: center;
-        align-self: stretch;
         border-radius: $radius-xl;
         border: 1px solid $button-primary-outline;
         background: $button-primary-default;
         color: white;
-
-        // Typography
         text-align: center;
-
-        /* Title/Demibold/Large */
         font-size: $title-demibold-large-size;
         font-style: normal;
         font-weight: 600;
-        line-height: $title-demibold-large-line-height; /* 130% */
+        line-height: $title-demibold-large-line-height;
         letter-spacing: $title-demibold-large-tracking;
       }
     }
