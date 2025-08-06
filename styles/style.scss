@@ -1,0 +1,291 @@
+// Design Systems Tokens
+
+// import font
+@font-face {
+  font-family: "TT Hoves";
+  src: url("../fonts/TTHoves-Regular.woff2") format("woff2"),
+    url("../fonts/TTHoves-Regular.woff") format("woff"),
+    url("../fonts/TTHoves-Regular.ttf") format("truetype");
+  font-weight: normal; // 400
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Hoves";
+  src: url("../fonts/TTHoves-Medium.woff2") format("woff2"),
+    url("../fonts/TTHoves-Medium.woff") format("woff"),
+    url("../fonts/TTHoves-Medium.ttf") format("truetype");
+  font-weight: 500; // Medium
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Hoves";
+  src: url("../fonts/TTHoves-DemiBold.woff2") format("woff2"),
+    url("../fonts/TTHoves-DemiBold.woff") format("woff"),
+    url("../fonts/TTHoves-DemiBold.ttf") format("truetype");
+  font-weight: 600; // DemiBold
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Hoves";
+  src: url("../fonts/TTHoves-Bold.woff2") format("woff2"),
+    url("../fonts/TTHoves-Bold.woff") format("woff"),
+    url("../fonts/TTHoves-Bold.ttf") format("truetype");
+  font-weight: bold; // 700
+  font-style: normal;
+}
+
+// Colors
+$color-bg-gradient-start: #f0f6ff;
+$color-bg-gradient-end: #f3f3f3;
+$color-surface-primary-50: rgba(255, 255, 255, 0.5);
+$color-primary-500: #007bff;
+$text-primary: #212121;
+
+// Colors
+$text-primary-dark: #141414;
+
+$button-primary-outline: #7aa5e9;
+$button-primary-default: #2169db;
+
+// Surface
+$surface-primary-50: rgba(255, 255, 255, 0.5);
+$surface-primary-light: #fff;
+
+// Spacing
+$spacing-xs: 10px;
+$spacing-md: 12px;
+$spacing-xl: 20px;
+$spacing-2xl: 24px;
+$spacing-3xl: 32px;
+$spacing-6xl: 40px;
+$spacing-gap: 16px;
+
+// Border Radius
+$radius-2xl: 24px;
+$radius-xl: 12px;
+$radius-null: 0;
+
+// Stroke
+$stroke-primary-80: rgba(255, 255, 255, 0.8);
+
+// Typography
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-weight-bold: 700;
+$font-family-base: "TT Hoves", sans-serif;
+// time duration preview typography
+$display-medium-small-size: 36px;
+$display-medium-small-line-height: 40px;
+$display-medium-small-tracking: -0.1px;
+
+$title-demibold-large-size: 20px;
+$title-demibold-large-line-height: 26px;
+$title-demibold-large-tracking: -0.1px;
+
+// Typography -- start and end time under ride duration
+$headline-medium-medium-size: 24px;
+$headline-medium-medium-line-height: 32px;
+$headline-medium-medium-tracking: -0.2px;
+
+// Shadows (added as placeholder)
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+// Gradient Mixin
+@mixin background-gradient($direction: 180deg) {
+  background: linear-gradient(
+    $direction,
+    $color-bg-gradient-start -14.2%,
+    $color-bg-gradient-end 108.41%
+  );
+}
+
+// Flexbox Mixin
+@mixin flex-container(
+  $direction: column,
+  $justify: center,
+  $align: flex-start,
+  $gap: $spacing-gap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+// __Reset Styles
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: 1.5;
+}
+
+// === Component Styles ===
+// Block: wrapper
+.game-selection {
+  @include background-gradient;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  margin: 0 auto;
+  padding: 94px 94px 93px 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: $spacing-gap;
+
+  &__modal {
+    width: 640px;
+    height: 134px;
+    border-radius: $radius-2xl;
+    background: $color-surface-primary-50;
+
+    padding: $spacing-md $spacing-2xl;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    &__title-bar {
+      display: flex;
+      width: 592px;
+      align-items: flex-start;
+      align-content: center;
+      // gap: 12px;
+
+      &__icon {
+        margin: auto 0;
+      }
+
+      &__display-text {
+        padding-left: 12px;
+        color: $text-primary;
+
+        /* Display/Medium/Small */
+        font-size: $display-medium-small-size;
+        font-style: normal;
+        font-weight: 500;
+        line-height: $display-medium-small-line-height; /* 111.111% */
+        letter-spacing: $display-medium-small-tracking;
+      }
+    }
+  }
+
+  &__card {
+    width: 640px;
+    height: 743px;
+
+    display: flex;
+    width: 640px;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__duration-preview {
+      border-radius: $radius-2xl $radius-2xl $radius-null $radius-null;
+      border: 3px solid $stroke-primary-80;
+      background: $surface-primary-50;
+      height: 239px;
+      width: 100%;
+      margin-bottom: -44px;
+      padding: $spacing-md $spacing-2xl;
+
+      &__ride-duration {
+        margin-top: 44px;
+
+        // &__start-time and &__end-time styles can be added here if needed
+        color: $text-primary-dark;
+        text-align: center;
+
+        /* Headline/Medium/Medium */
+        font-size: $headline-medium-medium-size;
+        font-style: normal;
+        font-weight: 500;
+        line-height: $headline-medium-medium-line-height; /* 133.333% */
+        letter-spacing: $headline-medium-medium-tracking;
+
+        // Layout
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        font-family: $font-family-base;
+
+        &__start-time {
+          padding: 0 $spacing-md;
+        }
+        &__end-time {
+          padding: 0 $spacing-md 0;
+        }
+      }
+      &__whole-timeframe {
+        padding-top: $spacing-xl;
+      }
+    }
+
+    &__set-duration {
+      border-radius: $radius-2xl;
+      padding: $spacing-2xl;
+      background: $surface-primary-light;
+      backdrop-filter: blur(10px);
+      height: 548px;
+      width: 100%;
+
+      // Layout
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &__view {
+        text-align: center;
+      }
+
+      &__action {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $spacing-md;
+        align-self: stretch;
+        justify-content: center; // Centers items vertically along the main axis
+        align-items: center; // Centers items horizontally along the cross axis
+        text-align: center;
+        flex-wrap: wrap;
+      }
+
+      &__continue-btn {
+        display: flex;
+        height: 72px;
+        width: 100%;
+        padding: $spacing-xl $spacing-6xl;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+        border-radius: $radius-xl;
+        border: 1px solid $button-primary-outline;
+        background: $button-primary-default;
+        color: white;
+
+        // Typography
+        text-align: center;
+
+        /* Title/Demibold/Large */
+        font-size: $title-demibold-large-size;
+        font-style: normal;
+        font-weight: 600;
+        line-height: $title-demibold-large-line-height; /* 130% */
+        letter-spacing: $title-demibold-large-tracking;
+      }
+    }
+  }
+}
