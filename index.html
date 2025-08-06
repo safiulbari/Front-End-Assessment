@@ -4,52 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <main class="game-selection" role="main">
-      <section class="game-selection__modal">
+    <main class="game-selector" role="main">
+      <section class="game-selector__modal">
         <img src="./assets/Step_Slider.svg" alt="stepper" />
-        <div class="game-selection__modal__title-bar">
+        <div class="game-selector__modal__header">
           <img
-            class="game-selection__modal__title-bar__icon"
+            class="game-selector__modal__header__icon"
             src="./assets/Chevron_Icon.svg"
             alt="left direction button"
           />
-          <div class="game-selection__modal__title-bar__display-text">
+          <div class="game-selector__modal__header__title">
             Select Your Game
           </div>
         </div>
       </section>
-      <section class="game-selection__card">
-        <div class="game-selection__card__duration-preview">
-          <div class="game-selection__card__duration-preview__ride-duration">
-            <p
-              class="game-selection__card__duration-preview__ride-duration__start-time"
-            >
+      <section class="game-selector__panel">
+        <div class="game-selector__panel__time-preview">
+          <div class="game-selector__panel__time-preview__duration">
+            <p class="game-selector__panel__time-preview__duration__start">
               6:00 PM
             </p>
-            <p
-              class="game-selection__card__duration-preview__ride-duration__end-time"
-            >
+            <p class="game-selector__panel__time-preview__duration__end">
               11:00 PM
             </p>
           </div>
-          <div class="game-selection__card__duration-preview__whole-timeframe">
-            <img src="./assets/Whole Timeframe.svg" alt="" />
+          <div class="game-selector__panel__time-preview__timeline">
+            <img src="./assets/Whole Timeframe.svg" alt="timeline" />
           </div>
         </div>
-        <div class="game-selection__card__set-duration">
-          <div class="game-selection__card__set-duration__view">
-            <p>How long would you like your ride to be?</p>
-            <p>6</p>
-            <p>hour</p>
-            <p>Slide to set total ride duration</p>
+        <div class="game-selector__panel__duration-setter">
+          <div class="game-selector__panel__duration-setter__content">
+            <p class="game-selector__panel__duration-setter__content__question">
+              How long would you like your ride to be?
+            </p>
+            <p class="game-selector__panel__duration-setter__content__hours">
+              6
+            </p>
+            <p class="game-selector__panel__duration-setter__content__unit">
+              hour
+            </p>
+            <p
+              class="game-selector__panel__duration-setter__content__instruction"
+            >
+              Slide to set total ride duration
+            </p>
           </div>
-          <div class="game-selection__card__set-duration__action">
-            <img src="./assets/Star_Icon.svg" alt="" />
-            <p>Recommended for your best game day experience</p>
-            <div class="game-selection__card__set-duration__continue-btn">
+          <div class="game-selector__panel__duration-setter__actions">
+            <img src="./assets/Star_Icon.svg" alt="recommendation icon" />
+            <p
+              class="game-selector__panel__duration-setter__actions__recommendation"
+            >
+              Recommended for your best game day experience
+            </p>
+            <div class="game-selector__panel__duration-setter__continue-button">
               Continue
             </div>
           </div>
