@@ -83,6 +83,10 @@
   z-index: 1;
 }
 
+.game-selector__panel {
+  margin-left: 8px;
+  margin-right: 8px;
+}
 .game-selector__panel__duration-setter__content__question {
   color: #212121;
   text-align: center;
@@ -109,4 +113,41 @@
   font-weight: 500;
   line-height: 40px;
   letter-spacing: -0.1px;
+}
+.game-selector__panel__duration-setter__content__instruction {
+  color: #242424;
+  text-align: center;
+  /* Body/Medium/Medium */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0;
+}
+.game-selector__panel__actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+.game-selector__panel__actions__recommendation {
+  color: #242424;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  opacity: 0.54;
+}
+.game-selector__panel__actions__continue-button {
+  color: white;
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 12px;
+  background: #2169db;
 }/*# sourceMappingURL=mobile.css.map */

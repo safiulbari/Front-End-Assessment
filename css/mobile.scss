@@ -60,32 +60,70 @@
     }
   }
 }
-.game-selector__panel__duration-setter__content {
-  &__question {
-    color: $text-primary;
-    text-align: center;
-    font-size: $body-medium-medium-size;
-    font-style: normal;
-    font-weight: 500;
-    line-height: $body-medium-medium-line-height;
-    letter-spacing: $body-medium-medium-tracking;
+.game-selector__panel {
+  margin-left: 8px;
+  margin-right: 8px;
+  &__duration-setter__content {
+    &__question {
+      color: $text-primary;
+      text-align: center;
+      font-size: $body-medium-medium-size;
+      font-style: normal;
+      font-weight: 500;
+      line-height: $body-medium-medium-line-height;
+      letter-spacing: $body-medium-medium-tracking;
+    }
+    &__hours {
+      color: $text-primary;
+      text-align: center;
+      font-size: 96px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: $display-medium-large-line-height;
+      letter-spacing: $display-medium-small-tracking;
+    }
+    &__unit {
+      color: $text-primary;
+      text-align: center;
+      font-size: $display-medium-small-size;
+      font-style: normal;
+      font-weight: 500;
+      line-height: $display-medium-small-line-height;
+      letter-spacing: $display-medium-small-tracking;
+    }
+    &__instruction {
+      color: #242424;
+      text-align: center;
+
+      /* Body/Medium/Medium */
+      font-size: $body-medium-medium-size;
+      font-style: normal;
+      font-weight: 500;
+      line-height: $body-medium-medium-line-height;
+      letter-spacing: $body-medium-medium-tracking;
+    }
   }
-  &__hours {
-    color: $text-primary;
-    text-align: center;
-    font-size: 96px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: $display-medium-large-line-height;
-    letter-spacing: $display-medium-small-tracking;
-  }
-  &__unit {
-    color: $text-primary;
-    text-align: center;
-    font-size: $display-medium-small-size;
-    font-style: normal;
-    font-weight: 500;
-    line-height: $display-medium-small-line-height;
-    letter-spacing: $display-medium-small-tracking;
+  &__actions {
+    @include flex-container(column, flex-start, center);
+    &__recommendation {
+      color: #242424;
+      text-align: center;
+      font-size: $label-medium-size;
+      font-style: normal;
+      font-weight: 500;
+      line-height: $label-medium-line-height;
+      letter-spacing: $label-medium-tracking;
+      opacity: 0.54;
+    }
+    &__continue-button {
+      color: white;
+      display: flex;
+      padding: $padding-lg;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      border-radius: $radius-md;
+      background: $button-primary-default;
+    }
   }
 }

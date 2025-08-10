@@ -65,6 +65,7 @@ $padding-6xl: 40px;
 // border Radius
 $radius-2xl: 24px;
 $radius-xl: 12px;
+$radius-md: 12px;
 $radius-null: 0;
 
 // stroke
@@ -84,13 +85,16 @@ $display-medium-small-tracking: -0.1px;
 // font size
 $title-demibold-large-size: 20px;
 $body-medium-medium-size: 16px;
+$label-medium-size: 12px;
 
 // tracking
 $title-demibold-large-tracking: -0.1px;
 $body-medium-medium-tracking: 0;
 $display-medium-large-tracking: -0.1px;
+$label-medium-tracking: 0.2px;
 
 // Line height
+$label-medium-line-height: 16px;
 $body-medium-medium-line-height: 22px;
 $title-medium-medium-line-height: 24px;
 $title-demibold-large-line-height: 26px;
@@ -100,5 +104,3 @@ $display-medium-large-line-height: 56px;
 $headline-medium-medium-size: 24px;
 $headline-medium-medium-line-height: 32px;
 $headline-medium-medium-tracking: -0.2px;
-
-//
