@@ -54,8 +54,8 @@ body {
 
   &__panel {
     width: 640px;
-    height: 743px;
-    @include flex-container(column, flex-start, flex-start);
+    // height: 743px;
+    @include flex-container(column, flex-start, flex-start, 0);
 
     &__time-preview {
       border-radius: $radius-2xl $radius-2xl $radius-null $radius-null;
@@ -92,11 +92,11 @@ body {
     }
 
     &__duration-setter {
-      border-radius: $radius-2xl;
+      border-radius: $radius-2xl $radius-2xl 0 0;
       padding: $spacing-2xl;
       background: $surface-primary-light;
       backdrop-filter: blur(10px);
-      height: 548px;
+      // height: 548px;
       width: 100%;
       @include flex-container(column, space-between);
 
@@ -207,6 +207,41 @@ body {
           line-height: $title-demibold-large-line-height;
           letter-spacing: $title-demibold-large-tracking;
         }
+      }
+    }
+    &__actions {
+      @include flex-container(column, center, center, $spacing-md);
+      align-self: stretch;
+      flex-wrap: wrap;
+
+      border-radius: 0 0 $radius-2xl $radius-2xl;
+      padding: $spacing-2xl;
+      background: $surface-primary-light;
+
+      &__recommendation {
+        margin: 0;
+        color: $text-primary;
+        font-family: $font-family-base;
+        font-size: $font-size-base;
+        font-style: normal;
+        font-weight: 500;
+        line-height: $title-medium-medium-line-height;
+      }
+      &__continue-button {
+        @include flex-container(row, center, center);
+        height: 72px;
+        width: 100%;
+        padding: $spacing-xl $spacing-6xl;
+        border-radius: $radius-xl;
+        border: 1px solid $button-primary-outline;
+        background: $button-primary-default;
+        color: white;
+        text-align: center;
+        font-size: $title-demibold-large-size;
+        font-style: normal;
+        font-weight: 600;
+        line-height: $title-demibold-large-line-height;
+        letter-spacing: $title-demibold-large-tracking;
       }
     }
   }
