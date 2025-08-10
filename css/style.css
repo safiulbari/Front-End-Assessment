@@ -138,6 +138,11 @@ body {
   gap: 16px;
 }
 .game-selector__panel__duration-setter__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
   text-align: center;
   color: #212121;
   font-family: "TT Hoves", sans-serif;
@@ -145,9 +150,54 @@ body {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.1px;
+  width: 100%;
+  height: 100%;
 }
-.game-selector__panel__duration-setter__content__question, .game-selector__panel__duration-setter__content__hours, .game-selector__panel__duration-setter__content__unit, .game-selector__panel__duration-setter__content__instruction {
-  margin: 0;
+.game-selector__panel__duration-setter__content__question {
+  color: #141414;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 133.333% */
+  letter-spacing: -0.1px;
+  padding-top: 16px;
+  padding-bottom: 40px;
+}
+.game-selector__panel__duration-setter__content__hours {
+  color: #141414;
+  text-align: center;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 56px;
+  letter-spacing: -0.1px;
+}
+.game-selector__panel__duration-setter__content__unit {
+  color: #141414;
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px; /* 111.111% */
+  letter-spacing: -0.1px;
+  padding-bottom: 14px;
+}
+.game-selector__panel__duration-setter__content__instruction {
+  color: rgba(20, 20, 20, 0.7);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 137.5% */
+  letter-spacing: 0;
+  padding-bottom: 16px;
+}
+.game-selector__panel__duration-setter__content__slider-desktop {
+  width: 100%;
+  height: 39px;
+  border-radius: 9999px;
+  background: rgba(33, 105, 219, 0.1);
 }
 .game-selector__panel__duration-setter__actions {
   display: flex;
@@ -167,7 +217,7 @@ body {
   font-weight: 500;
   line-height: 24px;
 }
-.game-selector__panel__duration-setter__continue-button {
+.game-selector__panel__duration-setter__actions__continue-button {
   display: flex;
   flex-direction: row;
   justify-content: center;
