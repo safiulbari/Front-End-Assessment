@@ -2,14 +2,8 @@
 @import "abstracts/_variables";
 @import "abstracts/mixins";
 
-// Reset Styles
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+// set default utilites
+@import "base/_reset";
 
 body {
   font-family: $font-family-base;
