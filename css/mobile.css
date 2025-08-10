@@ -30,22 +30,23 @@
   padding: 0;
 }
 
+* {
+  font-family: "TT Hoves", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 @media (max-width: 767px) {
   .game-selector__modal__desktop-stepper {
     display: none;
   }
+  .game-selector__panel__time-preview {
+    display: none;
+  }
 }
-*,
-body {
-  font-family: "TT Hoves", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  background: linear-gradient(180deg, #f0f6ff -14.2%, #f3f3f3 108.41%);
-}
-
 .game-selector {
   background: linear-gradient(180deg, #f0f6ff -14.2%, #f3f3f3 108.41%);
-  background: white;
+  height: 100vh;
 }
 
 .game-selector__modal__header {
@@ -80,4 +81,32 @@ body {
   bottom: 0;
   left: 0;
   z-index: 1;
+}
+
+.game-selector__panel__duration-setter__content__question {
+  color: #212121;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0;
+}
+.game-selector__panel__duration-setter__content__hours {
+  color: #212121;
+  text-align: center;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 56px;
+  letter-spacing: -0.1px;
+}
+.game-selector__panel__duration-setter__content__unit {
+  color: #212121;
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -0.1px;
 }/*# sourceMappingURL=mobile.css.map */
