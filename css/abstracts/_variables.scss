@@ -1,0 +1,93 @@
+// Import font
+@font-face {
+  font-family: "TT Hoves";
+  src: url("../fonts/TTHoves-Regular.woff2") format("woff2"),
+    url("../fonts/TTHoves-Regular.woff") format("woff"),
+    url("../fonts/TTHoves-Regular.ttf") format("truetype");
+  font-weight: normal; // 400
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Hoves";
+  src: url("../fonts/TTHoves-Medium.woff2") format("woff2"),
+    url("../fonts/TTHoves-Medium.woff") format("woff"),
+    url("../fonts/TTHoves-Medium.ttf") format("truetype");
+  font-weight: 500; // Medium
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Hoves";
+  src: url("../fonts/TTHoves-DemiBold.woff2") format("woff2"),
+    url("../fonts/TTHoves-DemiBold.woff") format("woff"),
+    url("../fonts/TTHoves-DemiBold.ttf") format("truetype");
+  font-weight: 600; // DemiBold
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Hoves";
+  src: url("../fonts/TTHoves-Bold.woff2") format("woff2"),
+    url("../fonts/TTHoves-Bold.woff") format("woff"),
+    url("../fonts/TTHoves-Bold.ttf") format("truetype");
+  font-weight: bold; // 700
+  font-style: normal;
+}
+
+// Colors
+$color-bg-gradient-start: #f0f6ff;
+$color-bg-gradient-end: #f3f3f3;
+$color-surface-primary-50: rgba(255, 255, 255, 0.5);
+$color-primary-500: #007bff;
+$text-primary: #212121;
+$text-primary-dark: #141414;
+$button-primary-outline: #7aa5e9;
+$button-primary-default: #2169db;
+
+// Surface
+$surface-primary-50: rgba(255, 255, 255, 0.5);
+$surface-primary-light: #fff;
+
+// Spacing
+$spacing-xs: 10px;
+$spacing-md: 12px;
+$spacing-xl: 20px;
+$spacing-2xl: 24px;
+$spacing-3xl: 32px;
+$spacing-6xl: 40px;
+$spacing-gap: 16px;
+
+// Padding
+$padding-lg: 16px;
+$padding-6xl: 40px;
+
+// Border Radius
+$radius-2xl: 24px;
+$radius-xl: 12px;
+$radius-null: 0;
+
+// Stroke
+$stroke-primary-80: rgba(255, 255, 255, 0.8);
+
+// Typography
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-weight-bold: 700;
+$font-family-base: "TT Hoves", sans-serif;
+// Time duration preview typography
+$display-medium-small-size: 36px;
+$display-medium-small-line-height: 40px;
+$display-medium-small-tracking: -0.1px;
+
+$title-demibold-large-size: 20px;
+$title-demibold-large-line-height: 26px;
+$title-demibold-large-tracking: -0.1px;
+
+// Line height
+$title-medium-medium-line-height: 24px;
+
+// Typography -- start and end time under ride duration
+$headline-medium-medium-size: 24px;
+$headline-medium-medium-line-height: 32px;
+$headline-medium-medium-tracking: -0.2px;

@@ -1,0 +1,22 @@
+// Gradient Mixin
+@mixin background-gradient($direction: 180deg) {
+  background: linear-gradient(
+    $direction,
+    $color-bg-gradient-start -14.2%,
+    $color-bg-gradient-end 108.41%
+  );
+}
+
+// Flexbox Mixin
+@mixin flex-container(
+  $direction: column,
+  $justify: center,
+  $align: flex-start,
+  $gap: $spacing-gap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
