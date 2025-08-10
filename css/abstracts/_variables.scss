@@ -1,4 +1,4 @@
-// Import font
+// import font
 @font-face {
   font-family: "TT Hoves";
   src: url("../fonts/TTHoves-Regular.woff2") format("woff2"),
@@ -45,11 +45,11 @@ $text-primary-dark: #141414;
 $button-primary-outline: #7aa5e9;
 $button-primary-default: #2169db;
 
-// Surface
+// surface
 $surface-primary-50: rgba(255, 255, 255, 0.5);
 $surface-primary-light: #fff;
 
-// Spacing
+// spacing
 $spacing-xs: 10px;
 $spacing-md: 12px;
 $spacing-xl: 20px;
@@ -58,34 +58,37 @@ $spacing-3xl: 32px;
 $spacing-6xl: 40px;
 $spacing-gap: 16px;
 
-// Padding
+// padding
 $padding-lg: 16px;
 $padding-6xl: 40px;
 
-// Border Radius
+// border Radius
 $radius-2xl: 24px;
 $radius-xl: 12px;
 $radius-null: 0;
 
-// Stroke
+// stroke
 $stroke-primary-80: rgba(255, 255, 255, 0.8);
 
-// Typography
+// typography
 $font-size-base: 16px;
 $font-size-lg: 18px;
 $font-weight-bold: 700;
 $font-family-base: "TT Hoves", sans-serif;
-// Time duration preview typography
+
+// time duration preview typography
 $display-medium-small-size: 36px;
 $display-medium-small-line-height: 40px;
 $display-medium-small-tracking: -0.1px;
 
 $title-demibold-large-size: 20px;
-$title-demibold-large-line-height: 26px;
+
+// tracking
 $title-demibold-large-tracking: -0.1px;
 
 // Line height
 $title-medium-medium-line-height: 24px;
+$title-demibold-large-line-height: 26px;
 
 // Typography -- start and end time under ride duration
 $headline-medium-medium-size: 24px;

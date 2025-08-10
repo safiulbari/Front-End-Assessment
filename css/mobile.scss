@@ -13,13 +13,49 @@
   }
 }
 
+*,
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: 1.5;
+  @include background-gradient;
+}
+
+.game-selector {
+  @include background-gradient;
+  background: white;
+}
+
 .game-selector__modal {
   &__header {
     @include flex-container(row, flex-start, center, $spacing-md);
+    position: relative;
     height: 56px;
-    background: red;
+    // background: red;
     padding: $padding-lg;
     &__title {
+      margin: auto;
+      color: $text-primary;
+      text-align: center;
+
+      font-size: $title-demibold-large-size;
+      font-style: normal;
+      font-weight: 600;
+      line-height: $title-demibold-large-line-height;
+      letter-spacing: $title-demibold-large-tracking;
+      padding-right: 24px;
+    }
+    &::after {
+      content: "";
+      background-color: #007bff; // Blue line
+      height: 2px;
+      width: 30%; // 30% of the header width
+      display: block;
+      position: absolute;
+      border-radius: 0px 20px 20px 0px;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
     }
   }
 }
