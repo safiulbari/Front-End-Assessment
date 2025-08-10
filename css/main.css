@@ -30,6 +30,14 @@
   padding: 0;
 }
 
+@media (min-width: 767px) {
+  .game-selector__panel__duration-setter__content__slider-mobile {
+    display: none;
+  }
+  .game-selector__panel__duration-setter__content__timeframe-mobile {
+    display: none;
+  }
+}
 body {
   font-family: "TT Hoves", sans-serif;
   font-size: 16px;

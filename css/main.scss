@@ -5,6 +5,16 @@
 // set default utilites
 @import "base/_reset";
 
+// media quireies for hide thing
+@media (min-width: 767px) {
+  .game-selector__panel__duration-setter__content__slider-mobile {
+    display: none;
+  }
+  .game-selector__panel__duration-setter__content__timeframe-mobile {
+    display: none;
+  }
+}
+
 body {
   font-family: $font-family-base;
   font-size: $font-size-base;

@@ -95,6 +95,7 @@
   font-weight: 500;
   line-height: 22px;
   letter-spacing: 0;
+  padding-top: 24px;
 }
 .game-selector__panel__duration-setter__content__hours {
   color: #212121;
@@ -103,7 +104,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 56px;
-  letter-spacing: -0.1px;
+  padding-top: 40px;
 }
 .game-selector__panel__duration-setter__content__unit {
   color: #212121;
@@ -113,23 +114,56 @@
   font-weight: 500;
   line-height: 40px;
   letter-spacing: -0.1px;
+  padding-top: 14px;
+}
+.game-selector__panel__duration-setter__content__timeframe-mobile {
+  margin-top: 40px;
+  margin-bottom: 84px;
+}
+.game-selector__panel__duration-setter__content__timeframe-mobile__img {
+  width: 100%;
+  border: 1px solid red;
+  margin-bottom: 12px;
+}
+.game-selector__panel__duration-setter__content__timeframe-mobile__duration {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.game-selector__panel__duration-setter__content__timeframe-mobile__duration__start, .game-selector__panel__duration-setter__content__timeframe-mobile__duration__end {
+  color: #141414;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.1px;
+  margin: 0 12px;
+}
+.game-selector__panel__duration-setter__content__slider-mobile {
+  height: 68px;
+  border-radius: 99px;
+  width: 100%;
+  background: rgba(33, 105, 219, 0.1);
+  margin-bottom: 8px;
 }
 .game-selector__panel__duration-setter__content__instruction {
   color: #242424;
   text-align: center;
-  /* Body/Medium/Medium */
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 22px;
   letter-spacing: 0;
+  margin-bottom: 58px;
 }
 .game-selector__panel__actions {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 16px;
+  gap: 0;
 }
 .game-selector__panel__actions__recommendation {
   color: #242424;
@@ -140,6 +174,7 @@
   line-height: 16px;
   letter-spacing: 0.2px;
   opacity: 0.54;
+  margin-top: 8px;
 }
 .game-selector__panel__actions__continue-button {
   color: white;
@@ -150,4 +185,5 @@
   width: 100%;
   border-radius: 12px;
   background: #2169db;
+  margin-top: 16px;
 }/*# sourceMappingURL=mobile.css.map */

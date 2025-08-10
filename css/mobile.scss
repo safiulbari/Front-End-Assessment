@@ -72,6 +72,7 @@
       font-weight: 500;
       line-height: $body-medium-medium-line-height;
       letter-spacing: $body-medium-medium-tracking;
+      padding-top: 24px;
     }
     &__hours {
       color: $text-primary;
@@ -80,7 +81,7 @@
       font-style: normal;
       font-weight: 500;
       line-height: $display-medium-large-line-height;
-      letter-spacing: $display-medium-small-tracking;
+      padding-top: 40px;
     }
     &__unit {
       color: $text-primary;
@@ -90,21 +91,52 @@
       font-weight: 500;
       line-height: $display-medium-small-line-height;
       letter-spacing: $display-medium-small-tracking;
+      padding-top: 14px;
+    }
+
+    &__timeframe-mobile {
+      margin-top: 40px;
+      margin-bottom: 84px;
+      &__img {
+        width: 100%;
+        border: 1px solid red;
+        margin-bottom: 12px;
+      }
+      &__duration {
+        @include flex-container(row, space-between, center, $spacing-md);
+
+        &__start,
+        &__end {
+          color: $text-primary-dark;
+          font-size: $title-medium-large-size;
+          font-style: normal;
+          font-weight: 500;
+          line-height: $title-medium-large-line-height;
+          letter-spacing: $title--medium-large-tracking;
+          margin: 0 $padding-md;
+        }
+      }
+    }
+    &__slider-mobile {
+      height: 68px;
+      border-radius: 99px;
+      width: 100%;
+      background: $surface-secondary-accent-10;
+      margin-bottom: $padding-sm;
     }
     &__instruction {
       color: #242424;
       text-align: center;
-
-      /* Body/Medium/Medium */
       font-size: $body-medium-medium-size;
       font-style: normal;
       font-weight: 500;
       line-height: $body-medium-medium-line-height;
       letter-spacing: $body-medium-medium-tracking;
+      margin-bottom: 58px;
     }
   }
   &__actions {
-    @include flex-container(column, flex-start, center);
+    @include flex-container(column, flex-start, center, 0);
     &__recommendation {
       color: #242424;
       text-align: center;
@@ -114,6 +146,7 @@
       line-height: $label-medium-line-height;
       letter-spacing: $label-medium-tracking;
       opacity: 0.54;
+      margin-top: 8px;
     }
     &__continue-button {
       color: white;
@@ -124,6 +157,7 @@
       width: 100%;
       border-radius: $radius-md;
       background: $button-primary-default;
+      margin-top: 16px;
     }
   }
 }
