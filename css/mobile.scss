@@ -1,0 +1,25 @@
+// imports variables and mixins
+@import "abstracts/_variables";
+@import "abstracts/mixins";
+
+// set default utilites
+@import "base/_reset";
+
+// responsive quieres
+
+@media (max-width: 767px) {
+  .game-selector__modal__desktop-stepper {
+    display: none;
+  }
+}
+
+.game-selector__modal {
+  &__header {
+    @include flex-container(row, flex-start, center, $spacing-md);
+    height: 56px;
+    background: red;
+    padding: $padding-lg;
+    &__title {
+    }
+  }
+}

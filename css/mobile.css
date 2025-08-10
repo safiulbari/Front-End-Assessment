@@ -1,1 +1,47 @@
-/*# sourceMappingURL=mobile.css.map */
+@font-face {
+  font-family: "TT Hoves";
+  src: url("../fonts/TTHoves-Regular.woff2") format("woff2"), url("../fonts/TTHoves-Regular.woff") format("woff"), url("../fonts/TTHoves-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Hoves";
+  src: url("../fonts/TTHoves-Medium.woff2") format("woff2"), url("../fonts/TTHoves-Medium.woff") format("woff"), url("../fonts/TTHoves-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Hoves";
+  src: url("../fonts/TTHoves-DemiBold.woff2") format("woff2"), url("../fonts/TTHoves-DemiBold.woff") format("woff"), url("../fonts/TTHoves-DemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Hoves";
+  src: url("../fonts/TTHoves-Bold.woff2") format("woff2"), url("../fonts/TTHoves-Bold.woff") format("woff"), url("../fonts/TTHoves-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 767px) {
+  .game-selector__modal__desktop-stepper {
+    display: none;
+  }
+}
+.game-selector__modal__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  height: 56px;
+  background: red;
+  padding: 16px;
+}/*# sourceMappingURL=mobile.css.map */
