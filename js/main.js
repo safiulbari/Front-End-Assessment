@@ -11,9 +11,17 @@ updateTitle();
 
 window.addEventListener("resize", updateTitle);
 
-// interactive slider
+// interactive slider - desktop
 const steps = document.querySelectorAll(".slider-desktop__stepper__step");
 const fill = document.querySelector(".slider-desktop__stepper__fill");
+
+const recommendedImg = document.querySelector(
+  '.slider-desktop__stepper__step[data-step="1"] .slider-desktop__stepper__circle--recommended img'
+);
+
+const hours = document.querySelector(
+  ".game-selector__panel__duration-setter__content__hours"
+);
 
 function updateStepper(activeIndex) {
   steps.forEach((step, index) => {
@@ -23,6 +31,25 @@ function updateStepper(activeIndex) {
   const stepWidth = steps[0].offsetWidth;
   const fillWidth = steps[activeIndex].offsetLeft + stepWidth / 2;
   fill.style.width = `${fillWidth}px`;
+
+  // hiding the image while 1st one selected
+  if (activeIndex === 0) {
+    recommendedImg.style.display = "none";
+  } else {
+    recommendedImg.style.display = "";
+  }
+
+  // in last step need  to fill up the slider fill
+  if (activeIndex === 8) {
+    fill.style.width = "568px";
+  }
+
+  // update hours based on sider movement
+  const baseHours = 6;
+  const currentHours = baseHours + activeIndex;
+  if (hours) {
+    hours.textContent = currentHours;
+  }
 }
 
 // Initialize: set first step selected and update active/fill
