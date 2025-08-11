@@ -108,6 +108,33 @@
       //   width: 100%;
       //   margin-bottom: 12px;
       // }
+      &__tooltip {
+        position: absolute;
+        top: 0px;
+        left: 45%;
+        z-index: 5;
+
+        color: $text-primary-30;
+        font-size: $body-medium-medium-size;
+        font-style: normal;
+        font-weight: 500;
+        line-height: $body-medium-medium-line-height;
+        letter-spacing: $body-medium-medium-tracking;
+        text-align: left;
+
+        padding: 0 12px;
+        border-radius: 30px;
+        background: white;
+        span {
+          color: $text-primary-dark;
+
+          font-size: $body-medium-medium-size;
+          font-style: normal;
+          font-weight: 500;
+          line-height: $body-medium-medium-line-height;
+          letter-spacing: $body-medium-medium-tracking;
+        }
+      }
       .timeframe-mobile_wrapper {
         position: relative;
         .timeframe_mobile {
@@ -137,6 +164,7 @@
       &__duration {
         @include flex-container(row, space-between, center, $spacing-md);
         position: relative;
+        margin-top: 18px;
         &__start,
         &__end {
           color: $text-primary-dark;

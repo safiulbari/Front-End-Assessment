@@ -125,6 +125,30 @@
   margin-bottom: 84px;
   position: relative;
 }
+.game-selector__panel__duration-setter__content__timeframe-mobile__tooltip {
+  position: absolute;
+  top: 0px;
+  left: 45%;
+  z-index: 5;
+  color: rgba(20, 20, 20, 0.3);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: left;
+  padding: 0 12px;
+  border-radius: 30px;
+  background: white;
+}
+.game-selector__panel__duration-setter__content__timeframe-mobile__tooltip span {
+  color: #141414;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0;
+}
 .game-selector__panel__duration-setter__content__timeframe-mobile .timeframe-mobile_wrapper {
   position: relative;
 }
@@ -157,6 +181,7 @@
   align-items: center;
   gap: 12px;
   position: relative;
+  margin-top: 18px;
 }
 .game-selector__panel__duration-setter__content__timeframe-mobile__duration__start, .game-selector__panel__duration-setter__content__timeframe-mobile__duration__end {
   color: #141414;
