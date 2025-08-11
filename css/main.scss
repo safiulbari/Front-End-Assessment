@@ -262,7 +262,7 @@ $bg-track: rgba(33, 105, 219, 0.1);
 $bg-fill: #226de9;
 $bg-fill-light: #e4ecfa;
 $primary: #226de9;
-$step-size: 18px;
+$step-size: 12px;
 $active-size: 18px;
 
 .game-selector__panel__duration-setter__slider-desktop {
@@ -311,8 +311,10 @@ $active-size: 18px;
       justify-content: center;
 
       &.active .slider-desktop__stepper__circle {
-        width: $active-size;
-        height: $active-size;
+        width: 12px;
+        height: 12px;
+        background: white;
+        border: 4px solid #2169db;
       }
     }
 
@@ -334,6 +336,8 @@ $active-size: 18px;
     &__step.selected .slider-desktop__stepper__circle {
       background: white;
       border: 6px solid #2169db;
+      width: 18px;
+      height: 18px;
     }
   }
 }
