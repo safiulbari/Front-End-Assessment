@@ -22,20 +22,24 @@ Assignment frontend project built using HTML, CSS, and JavaScript.
 
 ## File structure
 
+## File Structure
+
+```plaintext
 Assignment/
-├─ assets/ # icon, images
+├─ assets/               # icons, images
 ├─ css/
-│ ├─ abstracts/
-│ │ ├─ \_mixins.scss # some mixins
-│ │ └─ \_variables.scss # token implementation
-│ ├─ base/
-│ │ └─ \_reset.scss # reset default css
-│ ├─ main.css # desktop version css
-│ ├─ main.scss # desktop - scss
-│ ├─ mobile.css # mobile version css
-│ └─ mobile.scss # scss - mobile
-├─ fonts/ # used fonts
+│  ├─ abstracts/
+│  │  ├─ _mixins.scss    # some mixins
+│  │  └─ _variables.scss # token implementation
+│  ├─ base/
+│  │  └─ _reset.scss     # reset default css
+│  ├─ main.css           # desktop version css
+│  ├─ main.scss          # desktop - scss
+│  ├─ mobile.css         # mobile version css
+│  └─ mobile.scss        # scss - mobile
+├─ fonts/                # used fonts
 ├─ js/
-│ └─ main.js # interactivity using js
-├─ index.html # main html file
+│  └─ main.js            # interactivity using js
+├─ index.html            # main html file
 └─ README.md
+```
