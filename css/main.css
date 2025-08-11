@@ -120,12 +120,37 @@ body {
   align-items: center;
   gap: 16px;
   font-family: "TT Hoves", sans-serif;
+  margin-bottom: 20px;
+  position: relative;
 }
 .game-selector__panel__time-preview__duration__start {
   padding: 0 12px;
 }
 .game-selector__panel__time-preview__duration__end {
   padding: 0 12px;
+}
+.game-selector__panel__time-preview__duration__tooltip {
+  position: absolute;
+  bottom: 0px;
+  left: 152px;
+  color: rgba(20, 20, 20, 0.3);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: left;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: white;
+}
+.game-selector__panel__time-preview__duration__tooltip span {
+  color: #141414;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0;
 }
 .game-selector__panel__time-preview__timeline {
   position: relative;
@@ -274,6 +299,7 @@ body {
   height: 39px;
   border-radius: 9999px;
   background: rgba(33, 105, 219, 0.1);
+  position: relative;
 }
 .game-selector__panel__duration-setter__slider-desktop .slider-desktop__stepper {
   width: 592px;
@@ -336,4 +362,9 @@ body {
   border: 6px solid #2169db;
   width: 18px;
   height: 18px;
+}
+.game-selector__panel__duration-setter__slider-desktop .slider-desktop__tooltip {
+  position: absolute;
+  left: 0;
+  bottom: -36px;
 }/*# sourceMappingURL=main.css.map */

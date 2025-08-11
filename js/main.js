@@ -22,6 +22,10 @@ const endTime = document.querySelector(
 );
 const stadiumBg = document.querySelector(".stadium-bg");
 const stadiumIcon = document.querySelector(".stadium-icon");
+const tooltip = document.querySelector(
+  ".game-selector__panel__time-preview__duration__tooltip"
+);
+const sliderDesktopTooltip = document.querySelector(".slider-desktop__tooltip");
 
 function format12Hour(hour24) {
   const hour = hour24 % 12 === 0 ? 12 : hour24 % 12;
@@ -46,8 +50,10 @@ function updateStepper(activeIndex) {
   // hiding the image while 1st one selected
   if (activeIndex === 0) {
     recommendedImg.style.display = "none";
+    sliderDesktopTooltip.style.display = "";
   } else {
     recommendedImg.style.display = "";
+    sliderDesktopTooltip.style.display = "none";
   }
 
   // in last step need  to fill up the slider fill
@@ -77,9 +83,13 @@ function updateStepper(activeIndex) {
     stadiumBg.style.height = "47px";
     stadiumIcon.style.left = `calc(50% - ${newWidth / 2}px)`;
   }
+
+  if (tooltip) {
+    const baseLeft = 152;
+    tooltip.style.left = baseLeft + 10 * activeIndex + "px";
+  }
 }
 
-// initialize- set first step selected and update active/fill
 steps.forEach((s) => s.classList.remove("selected"));
 steps[0].classList.add("selected");
 updateStepper(0);

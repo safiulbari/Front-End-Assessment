@@ -87,12 +87,40 @@ body {
         letter-spacing: $headline-medium-medium-tracking;
         @include flex-container(row, space-between, center);
         font-family: $font-family-base;
+        margin-bottom: 20px;
+        position: relative;
 
         &__start {
           padding: 0 $spacing-md;
         }
         &__end {
           padding: 0 $spacing-md;
+        }
+        &__tooltip {
+          position: absolute;
+          bottom: 0px;
+          left: 152px;
+
+          color: $text-primary-30;
+          font-size: $body-medium-medium-size;
+          font-style: normal;
+          font-weight: 500;
+          line-height: $body-medium-medium-line-height;
+          letter-spacing: $body-medium-medium-tracking;
+          text-align: left;
+
+          padding: 10px 20px;
+          border-radius: 8px;
+          background: white;
+          span {
+            color: $text-primary-dark;
+
+            font-size: $body-medium-medium-size;
+            font-style: normal;
+            font-weight: 500;
+            line-height: $body-medium-medium-line-height;
+            letter-spacing: $body-medium-medium-tracking;
+          }
         }
       }
 
@@ -302,6 +330,7 @@ $active-size: 18px;
   height: 39px;
   border-radius: 9999px;
   background: rgba(33, 105, 219, 0.1);
+  position: relative;
   .slider-desktop__stepper {
     // padding: 20px;
     width: 592px;
@@ -372,5 +401,10 @@ $active-size: 18px;
       width: 18px;
       height: 18px;
     }
+  }
+  .slider-desktop__tooltip {
+    position: absolute;
+    left: 0;
+    bottom: -36px;
   }
 }
