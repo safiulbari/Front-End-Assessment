@@ -102,13 +102,41 @@
     &__timeframe-mobile {
       margin-top: 40px;
       margin-bottom: 84px;
-      &__img {
-        width: 100%;
-        margin-bottom: 12px;
+      position: relative;
+
+      // &__img {
+      //   width: 100%;
+      //   margin-bottom: 12px;
+      // }
+      .timeframe-mobile_wrapper {
+        position: relative;
+        .timeframe_mobile {
+          width: 100%;
+        }
+        .stadium-bg-mobile {
+          position: absolute;
+          top: 0;
+          left: 50%; // start from middle
+          transform: translateX(-50%); // shift it back half of its width
+          z-index: 2;
+          max-width: 214px;
+          width: 100%;
+          height: 90%;
+          border-radius: 78px;
+          overflow: hidden;
+        }
+        .stadium-icon-mobile {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-180%, -50%);
+          z-index: 3;
+          // max-width: 48px;
+        }
       }
       &__duration {
         @include flex-container(row, space-between, center, $spacing-md);
-
+        position: relative;
         &__start,
         &__end {
           color: $text-primary-dark;
@@ -170,7 +198,7 @@ $bg-track-mobile: rgba(33, 105, 219, 0.1);
 $bg-fill-mobile: #226de9;
 $bg-fill-light-mobile: #e4ecfa;
 $primary-mobile: #2169db;
-$step-size-mobile: 9px;
+$step-size-mobile: 11px;
 $active-size-mobile: 48px;
 
 .game-selector__panel__duration-setter__content__slider-mobile {
@@ -182,21 +210,30 @@ $active-size-mobile: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  .slider-mobile__tooltip {
+    position: absolute;
+    left: 0;
+    top: -32px;
+  }
 
   .slider-mobile__stepper {
     width: 100%;
-    max-width: 320px;
+    // max-width: 320px;
     margin: 0 auto;
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 16px;
     height: 48px;
 
     &__track {
       display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding: 12px;
     }
 
     &__fill {

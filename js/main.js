@@ -33,6 +33,8 @@ const hours = document.querySelector(
   ".game-selector__panel__duration-setter__content__hours"
 );
 
+const sliderMobileTooltip = document.querySelector(".slider-mobile__tooltip");
+
 const recommandedStarMobile = document.querySelector(".star_icon");
 
 function format12Hour(hour24) {
@@ -56,10 +58,12 @@ function updateStepper(activeIndex) {
     recommendedImg.style.display = "none";
     sliderDesktopTooltip.style.display = "";
     recommandedStarMobile.style.display = "none";
+    sliderMobileTooltip.style.display = "";
   } else {
     recommendedImg.style.display = "";
     sliderDesktopTooltip.style.display = "none";
     recommandedStarMobile.style.display = "";
+    sliderMobileTooltip.style.display = "none";
   }
 
   // in last step need  to fill up the slider fill
@@ -113,7 +117,7 @@ steps.forEach((step, index) => {
   });
 });
 
-// Mobile slider
+// mobile slider
 const mobileSteps = document.querySelectorAll(".slider-mobile__stepper__step");
 
 mobileSteps.forEach((step, index) => {
