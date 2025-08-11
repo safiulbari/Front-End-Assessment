@@ -309,7 +309,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(33, 105, 219, 0.1);
+  background: linear-gradient(90deg, #2169db -1.67%, #2169db 4.91%, #f0f6ff 7.26%);
   border-radius: 999px;
   padding: 0 10px;
   height: 8px;
