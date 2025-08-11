@@ -199,50 +199,6 @@ body {
   letter-spacing: 0;
   padding-bottom: 16px;
 }
-.game-selector__panel__duration-setter__content__slider-desktop {
-  width: 100%;
-  height: 39px;
-  border-radius: 9999px;
-  background: rgba(33, 105, 219, 0.1);
-}
-.game-selector__panel__duration-setter__actions {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  align-self: stretch;
-  flex-wrap: wrap;
-}
-.game-selector__panel__duration-setter__actions__recommendation {
-  margin: 0;
-  color: #212121;
-  font-family: "TT Hoves", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-}
-.game-selector__panel__duration-setter__actions__continue-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  height: 72px;
-  width: 100%;
-  padding: 20px 40px;
-  border-radius: 12px;
-  border: 1px solid #7aa5e9;
-  background: #2169db;
-  color: white;
-  text-align: center;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 26px;
-  letter-spacing: -0.1px;
-}
 .game-selector__panel__actions {
   display: flex;
   flex-direction: column;
@@ -251,9 +207,8 @@ body {
   gap: 12px;
   align-self: stretch;
   flex-wrap: wrap;
-  border-radius: 0 0 24px 24px;
   padding: 24px;
-  background: #fff;
+  background: white;
 }
 .game-selector__panel__actions__recommendation {
   margin: 0;
@@ -283,4 +238,60 @@ body {
   font-weight: 600;
   line-height: 26px;
   letter-spacing: -0.1px;
+}
+
+.game-selector__panel__duration-setter__slider-desktop {
+  height: 39px;
+  border-radius: 9999px;
+  background: rgba(33, 105, 219, 0.1);
+}
+.game-selector__panel__duration-setter__slider-desktop .slider-desktop__stepper {
+  width: 592px;
+}
+.game-selector__panel__duration-setter__slider-desktop .slider-desktop__stepper__track {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(33, 105, 219, 0.1);
+  border-radius: 999px;
+  padding: 0 10px;
+  height: 8px;
+  margin-top: 15.5px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.game-selector__panel__duration-setter__slider-desktop .slider-desktop__stepper__fill {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 8px;
+  background: #226de9;
+  border-radius: 999px;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 0;
+  transition: width 0.3s ease;
+}
+.game-selector__panel__duration-setter__slider-desktop .slider-desktop__stepper__step {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+.game-selector__panel__duration-setter__slider-desktop .slider-desktop__stepper__step.active .slider-desktop__stepper__circle {
+  width: 18px;
+  height: 18px;
+}
+.game-selector__panel__duration-setter__slider-desktop .slider-desktop__stepper__circle {
+  width: 16px;
+  height: 16px;
+  background: #226de9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.game-selector__panel__duration-setter__slider-desktop .slider-desktop__stepper__circle--recommended {
+  border: 3px solid #e4ecfa;
 }/*# sourceMappingURL=main.css.map */
