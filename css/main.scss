@@ -97,7 +97,39 @@ body {
       }
 
       &__timeline {
+        position: relative;
         padding-top: $spacing-xl;
+        height: 44px;
+
+        .timeframe {
+          display: block;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        .stadium-bg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 2;
+          max-width: 300px;
+          width: 100%;
+          height: 47px;
+          border-radius: 23.5px;
+          overflow: hidden;
+        }
+
+        .stadium-icon {
+          position: absolute;
+          top: 50%;
+          left: calc(50% - 150px);
+          transform: translateY(-50%);
+          z-index: 3;
+        }
       }
     }
 
@@ -202,6 +234,7 @@ body {
         font-style: normal;
         font-weight: 500;
         line-height: $title-medium-medium-line-height;
+        opacity: 0.54;
       }
       &__continue-button {
         @include flex-container(row, center, center);

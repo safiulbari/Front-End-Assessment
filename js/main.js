@@ -14,10 +14,21 @@ window.addEventListener("resize", updateTitle);
 // interactive slider - desktop
 const steps = document.querySelectorAll(".slider-desktop__stepper__step");
 const fill = document.querySelector(".slider-desktop__stepper__fill");
-
 const recommendedImg = document.querySelector(
   '.slider-desktop__stepper__step[data-step="1"] .slider-desktop__stepper__circle--recommended img'
 );
+const endTime = document.querySelector(
+  ".game-selector__panel__time-preview__duration__end"
+);
+const stadiumBg = document.querySelector(".stadium-bg");
+const stadiumIcon = document.querySelector(".stadium-icon");
+
+function format12Hour(hour24) {
+  const hour = hour24 % 12 === 0 ? 12 : hour24 % 12;
+  const ampm = hour24 < 12 || hour24 === 24 ? "AM" : "PM";
+  const hourStr = hour.toString().padStart(2, "0");
+  return `${hourStr}:00 ${ampm}`;
+}
 
 const hours = document.querySelector(
   ".game-selector__panel__duration-setter__content__hours"
@@ -50,23 +61,33 @@ function updateStepper(activeIndex) {
   if (hours) {
     hours.textContent = currentHours;
   }
+
+  // end time update
+  const baseEndHour = 0;
+  const endHour24 = (baseEndHour + activeIndex) % 24;
+  if (endTime) {
+    endTime.textContent = format12Hour(endHour24);
+  }
+
+  if (stadiumBg && stadiumIcon) {
+    const initialWidth = 291; // px
+    const reduceBy = 20 * activeIndex;
+    const newWidth = Math.max(initialWidth - reduceBy, 0);
+    stadiumBg.style.width = newWidth + "px";
+    stadiumBg.style.height = "47px";
+    stadiumIcon.style.left = `calc(50% - ${newWidth / 2}px)`;
+  }
 }
 
-// Initialize: set first step selected and update active/fill
+// initialize- set first step selected and update active/fill
 steps.forEach((s) => s.classList.remove("selected"));
 steps[0].classList.add("selected");
 updateStepper(0);
 
-// Add click event listeners to steps
 steps.forEach((step, index) => {
   step.addEventListener("click", () => {
-    // Remove selected class from all steps
     steps.forEach((s) => s.classList.remove("selected"));
-
-    // Add selected class to clicked step
     step.classList.add("selected");
-
-    // Update active states and fill width
     updateStepper(index);
   });
 });
