@@ -21,15 +21,25 @@ function updateStepper(activeIndex) {
   });
 
   const stepWidth = steps[0].offsetWidth;
-  const gap = steps[1].offsetLeft - steps[0].offsetLeft - stepWidth;
   const fillWidth = steps[activeIndex].offsetLeft + stepWidth / 2;
   fill.style.width = `${fillWidth}px`;
 }
 
+// Initialize: set first step selected and update active/fill
+steps.forEach((s) => s.classList.remove("selected"));
+steps[0].classList.add("selected");
+updateStepper(0);
+
+// Add click event listeners to steps
 steps.forEach((step, index) => {
   step.addEventListener("click", () => {
+    // Remove selected class from all steps
+    steps.forEach((s) => s.classList.remove("selected"));
+
+    // Add selected class to clicked step
+    step.classList.add("selected");
+
+    // Update active states and fill width
     updateStepper(index);
   });
 });
-
-updateStepper(0); // Start at first step
