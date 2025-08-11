@@ -20,12 +20,20 @@ const recommendedImg = document.querySelector(
 const endTime = document.querySelector(
   ".game-selector__panel__time-preview__duration__end"
 );
+const endTimeMobile = document.querySelector(
+  ".game-selector__panel__duration-setter__content__timeframe-mobile__duration__end"
+);
 const stadiumBg = document.querySelector(".stadium-bg");
 const stadiumIcon = document.querySelector(".stadium-icon");
 const tooltip = document.querySelector(
   ".game-selector__panel__time-preview__duration__tooltip"
 );
 const sliderDesktopTooltip = document.querySelector(".slider-desktop__tooltip");
+const hours = document.querySelector(
+  ".game-selector__panel__duration-setter__content__hours"
+);
+
+const recommandedStarMobile = document.querySelector(".star_icon");
 
 function format12Hour(hour24) {
   const hour = hour24 % 12 === 0 ? 12 : hour24 % 12;
@@ -33,10 +41,6 @@ function format12Hour(hour24) {
   const hourStr = hour.toString().padStart(2, "0");
   return `${hourStr}:00 ${ampm}`;
 }
-
-const hours = document.querySelector(
-  ".game-selector__panel__duration-setter__content__hours"
-);
 
 function updateStepper(activeIndex) {
   steps.forEach((step, index) => {
@@ -51,9 +55,11 @@ function updateStepper(activeIndex) {
   if (activeIndex === 0) {
     recommendedImg.style.display = "none";
     sliderDesktopTooltip.style.display = "";
+    recommandedStarMobile.style.display = "none";
   } else {
     recommendedImg.style.display = "";
     sliderDesktopTooltip.style.display = "none";
+    recommandedStarMobile.style.display = "";
   }
 
   // in last step need  to fill up the slider fill
@@ -68,11 +74,16 @@ function updateStepper(activeIndex) {
     hours.textContent = currentHours;
   }
 
+  const baseStartHour = 18;
+
   // end time update
-  const baseEndHour = 0;
-  const endHour24 = (baseEndHour + activeIndex) % 24;
+  const currHours = 6 + activeIndex; // already from your baseHours logic
+  const endHour24 = (baseStartHour + currHours) % 24;
+
   if (endTime) {
     endTime.textContent = format12Hour(endHour24);
+
+    endTimeMobile.textContent = format12Hour(endHour24);
   }
 
   if (stadiumBg && stadiumIcon) {
@@ -99,5 +110,24 @@ steps.forEach((step, index) => {
     steps.forEach((s) => s.classList.remove("selected"));
     step.classList.add("selected");
     updateStepper(index);
+  });
+});
+
+// Mobile slider
+const mobileSteps = document.querySelectorAll(".slider-mobile__stepper__step");
+
+mobileSteps.forEach((step, index) => {
+  step.addEventListener("click", () => {
+    mobileSteps.forEach((s) => s.classList.remove("selected"));
+
+    step.classList.add("selected");
+    updateStepper(index);
+
+    const mobileFill = document.querySelector(".slider-mobile__stepper__fill");
+    if (mobileFill) {
+      const stepWidth = step.offsetWidth;
+      const fillWidth = step.offsetLeft + stepWidth / 2;
+      mobileFill.style.width = `${fillWidth}px`;
+    }
   });
 });

@@ -20,6 +20,10 @@
   .game-selector__panel__time-preview {
     display: none;
   }
+
+  .game-selector__panel__duration-setter__slider-desktop {
+    display: none;
+  }
 }
 
 .game-selector {
@@ -63,6 +67,7 @@
 .game-selector__panel {
   margin-left: 8px;
   margin-right: 8px;
+  position: relative;
   &__duration-setter__content {
     &__question {
       color: $text-primary;
@@ -116,13 +121,13 @@
         }
       }
     }
-    &__slider-mobile {
-      height: 68px;
-      border-radius: 99px;
-      width: 100%;
-      background: $surface-secondary-accent-10;
-      margin-bottom: $padding-sm;
-    }
+    // &__slider-mobile {
+    //   height: 68px;
+    //   border-radius: 99px;
+    //   width: 100%;
+    //   background: $surface-secondary-accent-10;
+    //   margin-bottom: $padding-sm;
+    // }
     &__instruction {
       color: #242424;
       text-align: center;
@@ -157,6 +162,112 @@
       border-radius: $radius-md;
       background: $button-primary-default;
       margin-top: 16px;
+    }
+  }
+}
+
+$bg-track-mobile: rgba(33, 105, 219, 0.1);
+$bg-fill-mobile: #226de9;
+$bg-fill-light-mobile: #e4ecfa;
+$primary-mobile: #2169db;
+$step-size-mobile: 9px;
+$active-size-mobile: 48px;
+
+.game-selector__panel__duration-setter__content__slider-mobile {
+  height: 68px;
+  border-radius: 99px;
+  width: 100%;
+  background: $surface-secondary-accent-10;
+  margin-bottom: $padding-sm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .slider-mobile__stepper {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    height: 48px;
+
+    &__track {
+      display: flex;
+    }
+
+    &__fill {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: 6px;
+      background: $bg-fill-mobile;
+      border-radius: 999px;
+      transform: translateY(-50%);
+      z-index: 1;
+      width: 0; // Updated by JS
+      // transition: width 0.3s ease;
+    }
+
+    &__step {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      cursor: pointer;
+
+      height: 48px;
+      width: 48px;
+
+      // &:first-child .slider-mobile__stepper__circle {
+      //   width: $active-size-mobile;
+      //   height: $active-size-mobile;
+      //   background: $primary-mobile;
+      //   border: none;
+      // }
+
+      // &:not(:first-child) .slider-mobile__stepper__circle {
+      //   width: $step-size-mobile;
+      //   height: $step-size-mobile;
+      //   background: $bg-fill-mobile;
+      // }
+      .slider-mobile__stepper__circle {
+        width: $step-size-mobile;
+        height: $step-size-mobile;
+        background: $bg-fill-mobile;
+      }
+
+      &.selected .slider-mobile__stepper__circle {
+        width: $active-size-mobile;
+        height: $active-size-mobile;
+        background: $bg-fill-mobile;
+        border: 9px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .slider-desktop__stepper__circle--recommended {
+        background: none;
+        height: 48px;
+        width: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &__circle {
+      border-radius: 50%;
+      position: absolute; // Center within step
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      &--recommended {
+        border: 3px solid $bg-fill-light-mobile;
+      }
     }
   }
 }
