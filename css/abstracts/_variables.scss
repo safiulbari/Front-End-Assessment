@@ -1,4 +1,4 @@
-// import font
+// typography - font imports
 @font-face {
   font-family: "TT Hoves";
   src: url("../fonts/TTHoves-Regular.woff2") format("woff2"),
@@ -35,21 +35,64 @@
   font-style: normal;
 }
 
-// Colors
+// typography - base settings
+$font-family-base: "TT Hoves", sans-serif;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-weight-bold: 700;
+
+// typography - font sizes
+$display-medium-small-size: 36px;
+$title-demibold-large-size: 20px;
+$title-medium-large-size: 20px;
+$body-medium-medium-size: 16px;
+$label-medium-size: 12px;
+$headline-medium-medium-size: 24px;
+
+// typography - line heights
+$display-medium-small-line-height: 40px;
+$display-medium-large-line-height: 56px;
+$title-demibold-large-line-height: 26px;
+$title-medium-large-line-height: 26px;
+$title-medium-medium-line-height: 24px;
+$body-medium-medium-line-height: 22px;
+$label-medium-line-height: 16px;
+$headline-medium-medium-line-height: 32px;
+
+// typography - letter spacing (tracking)
+$display-medium-small-tracking: -0.1px;
+$display-medium-large-tracking: -0.1px;
+$title-demibold-large-tracking: -0.1px;
+$title--medium-large-tracking: -0.1px;
+$body-medium-medium-tracking: 0;
+$label-medium-tracking: 0.2px;
+$headline-medium-medium-tracking: -0.2px;
+
+// colors - backgrounds
 $color-bg-gradient-start: #f0f6ff;
 $color-bg-gradient-end: #f3f3f3;
-$color-surface-primary-50: rgba(255, 255, 255, 0.5);
+$bg-track: #d7dee7;
+$bg-fill: #1976d2;
+$bg-fill-light: #eaf3ff;
+
+// colors - primary
+$primary: #1976d2;
 $color-primary-500: #007bff;
+$button-primary-default: #2169db;
+$button-primary-outline: #7aa5e9;
+
+// colors - text
 $text-primary: #212121;
 $text-primary-dark: #141414;
-$button-primary-outline: #7aa5e9;
-$button-primary-default: #2169db;
 $text-primary-30: rgba(20, 20, 20, 0.3);
 
-// surface
+// colors - surfaces
 $surface-primary-50: rgba(255, 255, 255, 0.5);
 $surface-primary-light: #fff;
 $surface-secondary-accent-10: rgba(33, 105, 219, 0.1);
+
+// colors - strokes
+$stroke-primary-80: rgba(255, 255, 255, 0.8);
 
 // spacing
 $spacing-xs: 10px;
@@ -66,56 +109,12 @@ $padding-md: 12px;
 $padding-lg: 16px;
 $padding-6xl: 40px;
 
-// border Radius
-$radius-2xl: 24px;
-$radius-xl: 12px;
-$radius-md: 12px;
+// border radius
 $radius-null: 0;
+$radius-md: 12px;
+$radius-xl: 12px;
+$radius-2xl: 24px;
 
-// stroke
-$stroke-primary-80: rgba(255, 255, 255, 0.8);
-
-// typography
-$font-size-base: 16px;
-$font-size-lg: 18px;
-$font-weight-bold: 700;
-$font-family-base: "TT Hoves", sans-serif;
-
-// time duration preview typography
-$display-medium-small-size: 36px;
-$display-medium-small-line-height: 40px;
-$display-medium-small-tracking: -0.1px;
-
-// font size
-$title-demibold-large-size: 20px;
-$body-medium-medium-size: 16px;
-$label-medium-size: 12px;
-$title-medium-large-size: 20px;
-
-// tracking
-$title-demibold-large-tracking: -0.1px;
-$body-medium-medium-tracking: 0;
-$display-medium-large-tracking: -0.1px;
-$label-medium-tracking: 0.2px;
-$title--medium-large-tracking: -0.1px;
-
-// Line height
-$label-medium-line-height: 16px;
-$body-medium-medium-line-height: 22px;
-$title-medium-medium-line-height: 24px;
-$title-medium-large-line-height: 26px;
-$title-demibold-large-line-height: 26px;
-$display-medium-large-line-height: 56px;
-
-// Typography -- start and end time under ride duration
-$headline-medium-medium-size: 24px;
-$headline-medium-medium-line-height: 32px;
-$headline-medium-medium-tracking: -0.2px;
-
-// stepper variable needed
+// component - stepper
 $step-size: 20px;
 $active-size: 32px;
-$primary: #1976d2;
-$bg-track: #d7dee7;
-$bg-fill: #1976d2;
-$bg-fill-light: #eaf3ff;
