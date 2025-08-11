@@ -319,7 +319,9 @@ body {
   // }
 }
 
-$bg-track: rgba(33, 105, 219, 0.1);
+// $bg-track: rgba(33, 105, 219, 0.1);
+$bg-track: border-radius: var(--Border-Radius-radius-full, 9999px);
+background: linear-gradient(90deg, #2169DB -1.67%,  #2169DB 4.91%, #F0F6FF 7.26%;
 $bg-fill: #226de9;
 $bg-fill-light: #e4ecfa;
 $primary: #226de9;

@@ -68,7 +68,14 @@
   margin-left: 8px;
   margin-right: 8px;
   position: relative;
+  // height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   &__duration-setter__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     &__question {
       color: $text-primary;
       text-align: center;
@@ -100,8 +107,8 @@
     }
 
     &__timeframe-mobile {
-      margin-top: 40px;
-      margin-bottom: 84px;
+      margin-top: 24px;
+      margin-bottom: 36px;
       position: relative;
 
       // &__img {
@@ -192,7 +199,7 @@
       font-weight: 500;
       line-height: $body-medium-medium-line-height;
       letter-spacing: $body-medium-medium-tracking;
-      margin-bottom: 58px;
+      margin-bottom: 32px;
     }
   }
   &__actions {

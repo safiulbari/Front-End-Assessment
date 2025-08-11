@@ -90,6 +90,14 @@
   margin-left: 8px;
   margin-right: 8px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.game-selector__panel__duration-setter__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .game-selector__panel__duration-setter__content__question {
   color: #212121;
@@ -121,8 +129,8 @@
   padding-top: 14px;
 }
 .game-selector__panel__duration-setter__content__timeframe-mobile {
-  margin-top: 40px;
-  margin-bottom: 84px;
+  margin-top: 24px;
+  margin-bottom: 36px;
   position: relative;
 }
 .game-selector__panel__duration-setter__content__timeframe-mobile__tooltip {
@@ -200,7 +208,7 @@
   font-weight: 500;
   line-height: 22px;
   letter-spacing: 0;
-  margin-bottom: 58px;
+  margin-bottom: 32px;
 }
 .game-selector__panel__actions {
   display: flex;
