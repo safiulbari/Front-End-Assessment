@@ -135,7 +135,7 @@
 }
 .game-selector__panel__duration-setter__content__timeframe-mobile__tooltip {
   position: absolute;
-  top: 0px;
+  top: -4px;
   left: 45%;
   z-index: 5;
   color: rgba(20, 20, 20, 0.3);
