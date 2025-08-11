@@ -226,133 +226,139 @@ body {
           letter-spacing: 0;
           padding-bottom: $padding-lg;
         }
-    }
-
-    &__actions {
-      @include flex-container(column, center, center, $spacing-md);
-      align-self: stretch;
-      flex-wrap: wrap;
-      padding: 24px;
-      background: white;
-
-      &__recommendation {
-        margin: 0;
-        color: $text-primary;
-        font-family: $font-family-base;
-        font-size: $font-size-base;
-        font-style: normal;
-        font-weight: 500;
-        line-height: $title-medium-medium-line-height;
-        opacity: 0.54;
       }
-      &__continue-button {
-        @include flex-container(row, center, center);
-        height: 72px;
-        width: 100%;
-        padding: $spacing-xl $spacing-6xl;
-        border-radius: $radius-xl;
-        border: 1px solid $button-primary-outline;
-        background: $button-primary-default;
-        color: white;
-        text-align: center;
-        font-size: $title-demibold-large-size;
-        font-style: normal;
-        font-weight: 600;
-        line-height: $title-demibold-large-line-height;
-        letter-spacing: $title-demibold-large-tracking;
-      }
-    }
-  }
-}
 
-// $bg-track: rgba(33, 105, 219, 0.1);
-$border-radius: 9999px;
-$bg-track: linear-gradient(90deg, #2169db -1.67%, #2169db 4.91%, #f0f6ff 7.26%);
-$bg-fill: #226de9;
-$bg-fill-light: #e4ecfa;
-$primary: #226de9;
-$step-size: 12px;
-$active-size: 18px;
-
-.game-selector__panel__duration-setter__slider-desktop {
-  height: 39px;
-  border-radius: 9999px;
-  background: rgba(33, 105, 219, 0.1);
-  position: relative;
-  .slider-desktop__stepper {
-    // padding: 20px;
-    width: 592px;
-
-    &__track {
-      position: relative;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: $bg-track;
-      border-radius: 999px;
-      padding: 0 10px;
-      height: 8px;
-      margin-top: 15.5px;
-      margin-left: 12px;
-      margin-right: 12px;
-    }
-
-    &__fill {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      height: 8px;
-      background: $bg-fill;
-      border-radius: 999px;
-      transform: translateY(-50%);
-      z-index: 1;
-      width: 0; // i need to update this in js
-      transition: width 0.3s ease;
-    }
-
-    &__step {
-      position: relative;
-      z-index: 2;
-      cursor: pointer;
-      width: 24px;
-      height: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      &.active .slider-desktop__stepper__circle {
-        width: 12px;
-        height: 12px;
+      &__actions {
+        @include flex-container(column, center, center, $spacing-md);
+        align-self: stretch;
+        flex-wrap: wrap;
+        padding: 24px;
         background: white;
-        border: 4px solid #2169db;
+
+        &__recommendation {
+          margin: 0;
+          color: $text-primary;
+          font-family: $font-family-base;
+          font-size: $font-size-base;
+          font-style: normal;
+          font-weight: 500;
+          line-height: $title-medium-medium-line-height;
+          opacity: 0.54;
+        }
+        &__continue-button {
+          @include flex-container(row, center, center);
+          height: 72px;
+          width: 100%;
+          padding: $spacing-xl $spacing-6xl;
+          border-radius: $radius-xl;
+          border: 1px solid $button-primary-outline;
+          background: $button-primary-default;
+          color: white;
+          text-align: center;
+          font-size: $title-demibold-large-size;
+          font-style: normal;
+          font-weight: 600;
+          line-height: $title-demibold-large-line-height;
+          letter-spacing: $title-demibold-large-tracking;
+        }
       }
-    }
-
-    &__circle {
-      width: $step-size;
-      height: $step-size;
-      background: $primary;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      // transition: all 0.3s ease;
-
-      &--recommended {
-        border: 3px solid $bg-fill-light;
-      }
-    }
-
-    &__step.selected .slider-desktop__stepper__circle {
-      background: white;
-      border: 6px solid #2169db;
-      width: 18px;
-      height: 18px;
     }
   }
-  .slider-desktop__tooltip {
-    position: absolute;
-    left: 0;
-    bottom: -36px;
+
+  // $bg-track: rgba(33, 105, 219, 0.1);
+  $border-radius: 9999px;
+  $bg-track: linear-gradient(
+    90deg,
+    #2169db -1.67%,
+    #2169db 4.91%,
+    #f0f6ff 7.26%
+  );
+  $bg-fill: #226de9;
+  $bg-fill-light: #e4ecfa;
+  $primary: #226de9;
+  $step-size: 12px;
+  $active-size: 18px;
+
+  .game-selector__panel__duration-setter__slider-desktop {
+    height: 39px;
+    border-radius: 9999px;
+    background: rgba(33, 105, 219, 0.1);
+    position: relative;
+    .slider-desktop__stepper {
+      // padding: 20px;
+      width: 592px;
+
+      &__track {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $bg-track;
+        border-radius: 999px;
+        padding: 0 10px;
+        height: 8px;
+        margin-top: 15.5px;
+        margin-left: 12px;
+        margin-right: 12px;
+      }
+
+      &__fill {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 8px;
+        background: $bg-fill;
+        border-radius: 999px;
+        transform: translateY(-50%);
+        z-index: 1;
+        width: 0; // i need to update this in js
+        transition: width 0.3s ease;
+      }
+
+      &__step {
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.active .slider-desktop__stepper__circle {
+          width: 12px;
+          height: 12px;
+          background: white;
+          border: 4px solid #2169db;
+        }
+      }
+
+      &__circle {
+        width: $step-size;
+        height: $step-size;
+        background: $primary;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // transition: all 0.3s ease;
+
+        &--recommended {
+          border: 3px solid $bg-fill-light;
+        }
+      }
+
+      &__step.selected .slider-desktop__stepper__circle {
+        background: white;
+        border: 6px solid #2169db;
+        width: 18px;
+        height: 18px;
+      }
+    }
+    .slider-desktop__tooltip {
+      position: absolute;
+      left: 0;
+      bottom: -36px;
+    }
   }
 }
